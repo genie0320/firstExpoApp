@@ -8,9 +8,9 @@ export default function App() {
     <View style={styles.container}>
 			{/*이미지 태그 soruce 부분에 가져온 미지 이름을 넣습니다 */}
       <Image 
-        source={favicon}
+        source={{uri:'https://images.unsplash.com/photo-1424819827928-55f0c8497861?fit=crop&w=600&h=600%27'}}
 				// 사용설명서에 나와 있는 resizeMode 속성 값을 그대로 넣어 적용합니다
-        resizeMode={"repeat"} // cover , contain
+        resizeMode={"cover"}
         style={styles.imageStyle}
       />
     </View>
