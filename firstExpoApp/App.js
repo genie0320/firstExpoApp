@@ -12,7 +12,7 @@ export default function App() {
          
         </View>
         <View style={styles.innerTwo}>
-          <Text>!!컨텐츠!!</Text>
+          <View style={styles.content}></View>
         </View>
 
       </View>
@@ -39,10 +39,12 @@ const styles = StyleSheet.create({
   },
   innerTwo: {
     flex:4,
-    justifyContent:"center", // flex-end, flex-start, center
-    // flex는 기본적으로 위에서 아래로 컨텐츠를 나열한다.
-    // 이걸 좌우로 바꿔주려면 direction을 주면 된다.
-    flexDirection:"row",
-    backgroundColor:"orange"
+    backgroundColor:"orange",
+    alignItems:"flex-end" // alignItems은 좌우가 디폴트이다. 상하가 디폴트인 justify-content 랑 다른 점. 근데 이 두개가 왜 다 필요한지 모르겠네...
+  },
+  content: {
+    width:50,
+    height:50,
+    backgroundColor:"#000"
   }
 });
