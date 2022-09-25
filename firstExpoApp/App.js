@@ -6,6 +6,12 @@ export default function App() {
   const customAlert = () => {
     Alert.alert('팝업 알람입니다!!')
   }
+
+  // const customAlert01 = (word) => {
+  //   Alert.alert(word,'팝업 알람입니다!!')
+  // }
+  // 이거 뭔가 매개변수를 내려주는 방법이 있었던거 같은데. 아마 그게 문제였던듯. 
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.textContainer}>
@@ -22,8 +28,14 @@ export default function App() {
             style={styles.buttonStyle} 
             title="버튼입니다 "
             color="#FF0000" 
-            onPress={customAlert}
+            onPress={()=>{customAlert()}}
           />
+        {/* <Button 
+            style={styles.buttonStyle} 
+            title="버튼입니다 "
+            color="#FF0000" 
+            onPress={(Genie)=>{customAlert01(Genie)}}
+          /> */}
       </View>
     </SafeAreaView>
   );
