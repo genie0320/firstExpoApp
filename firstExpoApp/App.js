@@ -1,31 +1,31 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Button, Alert, SafeAreaView } from 'react-native';
 
 export default function App() {
   return (
-    <ScrollView style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.textContainer}>
-        <Text style={styles.textStyle}>영역을 충분히 갖는 텍스트 입니다!</Text>
-      </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.textStyle}>영역을 충분히 갖는 텍스트 입니다!</Text>
-      </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.textStyle}>영역을 충분히 갖는 텍스트 입니다!</Text>
-      </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.textStyle}>영역을 충분히 갖는 텍스트 입니다!</Text>
-      </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.textStyle}>영역을 충분히 갖는 텍스트 입니다!</Text>
-      </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.textStyle}>영역을 충분히 갖는 텍스트 입니다!</Text>
-      </View>
-      <View style={styles.textContainer}>
-        <Text style={styles.textStyle}>영역을 충분히 갖는 텍스트 입니다!</Text>
-      </View>
-    </ScrollView>
+        <Text style={styles.textStyle}>아래 버튼을 눌러주세요</Text>
+        {/* 버튼 onPress 속성에 일반 함수를 연결 할 수 있습니다. */}
+        <Button 
+          style={styles.buttonStyle} 
+          title="버튼입니다 "
+          color="#f194ff" 
+          onPress={function(){
+            Alert.alert('팝업 알람입니다!!')
+          }}
+        />
+        {/* ES6 문법으로 배웠던 화살표 함수로 연결 할 수도 있습니다. */}
+        <Button 
+            style={styles.buttonStyle} 
+            title="버튼입니다 "
+            color="#FF0000" 
+            onPress={()=>{
+              Alert.alert('팝업 알람입니다!!')
+            }}
+          />
+          </View>
+    </SafeAreaView>
   );
 }
 
@@ -36,12 +36,9 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     height:100,
-    borderColor:'#000',
-    borderWidth:1,
-    borderRadius:10,
     margin:10,
   },
   textStyle: {
     textAlign:"center"
-  }
+  },
 });
