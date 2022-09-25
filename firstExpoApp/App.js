@@ -8,15 +8,13 @@ export default function App() {
 
       </View>
       <View style={styles.containerTwo}>
-
-      </View>
-      <View style={styles.containerThree}>
-        <View style={styles.InnerOne}>
-          
-        </View>
-        <View style={styles.InnerTwo}>
+        <View style={styles.innerOne}>
 
         </View>
+        <View style={styles.innerTwo}>
+
+        </View>
+
       </View>
     </View>
   );
@@ -24,7 +22,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex:1 // 껍데기를 100%로 봤을 때, 자식 요소들이 그걸 얼마나 차지할지의 문제. 마치 유산 같군.
+    flex:1
   },
   containerOne: {
     flex:1,
@@ -32,18 +30,15 @@ const styles = StyleSheet.create({
   },
   containerTwo:{
     flex:2,
+    flexDirection:"row", //column
     backgroundColor:"yellow"
   },
-  containerThree:{
-    flex:2,
+  innerOne: {
+    flex:1,
     backgroundColor:"blue"
   },
-  InnerOne:{
-    flex:2,
-    backgroundColor:"white"
-  },
-  InnerTwo:{
-    flex:5,
-    backgroundColor:"blue"
+  innerTwo: {
+    flex:4,
+    backgroundColor:"orange"
   }
 });
